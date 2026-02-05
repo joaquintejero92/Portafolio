@@ -2,7 +2,7 @@
 
 ## 📋 Información del Proyecto
 
-**Autor:** [Tu Nombre y Apellidos]  
+**Autor:** Joaquín Ángel Tejero Cañero  
 **Asignatura:** Diseño de Interfaces Web (DIW)  
 **Curso:** 2º DAW  
 **Tema:** Trabajo del Tema 4
