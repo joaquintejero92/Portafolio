@@ -1,33 +1,314 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Personal - [Tu Nombre]</title>
+    <meta name="description" content="Portafolio de Desarrollo Web - Trabajo Tema 4 DIW">
+    <meta name="author" content="Desarrollador Web">
+    <!-- Meta para View Transitions API -->
+    <meta name="view-transition" content="same-origin">
+    <title>Mi Portafolio | Desarrollador Web</title>
+
+    <!-- Tipografías de Google Fonts (2 fuentes requeridas) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            </nav>
+
+    <!-- =============================================
+         CABECERA CON NAVEGACIÓN Y CAMBIO DE TEMA
+         ============================================= -->
+    <header class="cabecera-principal">
+        <nav class="contenedor-navegacion">
+            <a href="#inicio" class="logo">
+                <!-- Logo SVG inline -->
+                <svg class="logo-icono" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" />
+                    <path d="M12 20L18 26L28 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span>DevPortfolio</span>
+            </a>
+
+            <ul class="enlaces-navegacion">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <!-- Cambio de tema claro/oscuro sin JavaScript -->
+            <div class="cambio-tema">
+                <input type="checkbox" id="interruptor-tema">
+                <label for="interruptor-tema" title="Cambiar tema claro/oscuro">
+                    <span class="icono-sol">☀️</span>
+                    <span class="icono-luna">🌙</span>
+                </label>
+            </div>
+
+            <!-- Menú hamburguesa para móvil -->
+            <input type="checkbox" id="menu-movil" class="menu-movil-checkbox">
+            <label for="menu-movil" class="menu-movil-icono" title="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </nav>
     </header>
 
     <main>
-        <section id="inicio">
-            <h1>Bienvenido a mi Portafolio</h1>
+        <!-- =============================================
+             SECCIÓN HERO / PRESENTACIÓN
+             ============================================= -->
+        <section id="inicio" class="seccion-hero">
+            <div class="hero-contenido">
+                <div class="hero-texto">
+                    <p class="hero-saludo">¡Hola! Soy Joaquin Tejero Cañero</p>
+                    <h1 class="hero-nombre">Desarrollador <span class="texto-gradiente">Web</span></h1>
+                    <p class="hero-descripcion">
+                        Creo experiencias digitales modernas y atractivas.
+                        Especializado en HTML, CSS y diseño responsive.
+                    </p>
+                    <div class="hero-botones">
+                        <a href="#proyectos" class="boton-primario">Ver Proyectos</a>
+                        <a href="#contacto" class="boton-secundario">Contactar</a>
+                    </div>
+                </div>
+
+                <div class="hero-imagen">
+                    <!-- Imagen con elemento <picture> para múltiples formatos y tamaños -->
+                    <picture>
+                        <source srcset="assets/img/foto-perfil-original.png" media="(min-width: 768px)"
+                            type="image/png">
+                        <source srcset="assets/img/foto-perfil-original.png" media="(max-width: 767px)"
+                            type="image/png">
+                        <img src="assets/img/foto-perfil-original.png" alt="Foto de perfil del desarrollador web"
+                            width="400" height="400" loading="eager">
+                    </picture>
+                </div>
+            </div>
+
+            <!-- Flecha animada para hacer scroll -->
+            <a href="#habilidades" class="flecha-scroll" aria-label="Ir a la siguiente sección">
+                <span></span>
+            </a>
         </section>
 
-        <section id="proyectos">
-            <h2>Mis Proyectos</h2>
+        <!-- =============================================
+             SECCIÓN HABILIDADES
+             ============================================= -->
+        <section id="habilidades" class="seccion-habilidades">
+            <h2 class="titulo-seccion">Mis Habilidades</h2>
+            <p class="subtitulo-seccion">Tecnologías con las que trabajo</p>
+
+            <div class="cuadricula-habilidades">
+                <!-- Tarjeta HTML5 -->
+                <article class="tarjeta-habilidad">
+                    <div class="tarjeta-cara tarjeta-frente">
+                        <img src="assets/icons/html5.svg" alt="Icono HTML5" class="icono-habilidad">
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="tarjeta-cara tarjeta-dorso">
+                        <p>Estructura semántica y accesible</p>
+                    </div>
+                </article>
+
+                <!-- Tarjeta CSS3 -->
+                <article class="tarjeta-habilidad">
+                    <div class="tarjeta-cara tarjeta-frente">
+                        <img src="assets/icons/css3.svg" alt="Icono CSS3" class="icono-habilidad">
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="tarjeta-cara tarjeta-dorso">
+                        <p>Estilos modernos y animaciones</p>
+                    </div>
+                </article>
+
+                <!-- Tarjeta JavaScript -->
+                <article class="tarjeta-habilidad">
+                    <div class="tarjeta-cara tarjeta-frente">
+                        <img src="assets/icons/javascript.svg" alt="Icono JavaScript" class="icono-habilidad">
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="tarjeta-cara tarjeta-dorso">
+                        <p>Interactividad y dinamismo</p>
+                    </div>
+                </article>
+
+                <!-- Tarjeta Diseño UI -->
+                <article class="tarjeta-habilidad">
+                    <div class="tarjeta-cara tarjeta-frente">
+                        <img src="assets/icons/diseno.svg" alt="Icono Diseño UI" class="icono-habilidad">
+                        <h3>Diseño UI</h3>
+                    </div>
+                    <div class="tarjeta-cara tarjeta-dorso">
+                        <p>Interfaces intuitivas y atractivas</p>
+                    </div>
+                </article>
+
+                <!-- Tarjeta Git -->
+                <article class="tarjeta-habilidad">
+                    <div class="tarjeta-cara tarjeta-frente">
+                        <img src="assets/icons/git.svg" alt="Icono Git" class="icono-habilidad">
+                        <h3>Git</h3>
+                    </div>
+                    <div class="tarjeta-cara tarjeta-dorso">
+                        <p>Control de versiones</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
+        <!-- =============================================
+             SECCIÓN PROYECTOS
+             ============================================= -->
+        <section id="proyectos" class="seccion-proyectos">
+            <h2 class="titulo-seccion">Proyectos Destacados</h2>
+            <p class="subtitulo-seccion">Algunos de mis trabajos recientes</p>
+
+            <div class="galeria-proyectos">
+                <!-- Proyecto 1: Web Corporativa -->
+                <article class="tarjeta-proyecto">
+                    <div class="proyecto-imagen">
+                        <picture>
+                            <source srcset="assets/img/proyecto-web.webp" type="image/webp">
+                            <img src="assets/img/proyecto-web-original.png" alt="Captura del proyecto Web Corporativa"
+                                loading="lazy" width="600" height="400">
+                        </picture>
+                    </div>
+                    <div class="proyecto-info">
+                        <span class="proyecto-categoria">Diseño Web</span>
+                        <h3>Web Corporativa</h3>
+                        <p>Sitio web moderno y responsive para empresa tecnológica. Diseño minimalista con animaciones
+                            suaves.</p>
+                        <div class="proyecto-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2: Tienda Online -->
+                <article class="tarjeta-proyecto">
+                    <div class="proyecto-imagen">
+                        <picture>
+                            <source srcset="assets/img/proyecto-tienda.webp" type="image/webp">
+                            <img src="assets/img/proyecto-tienda-original.png" alt="Captura del proyecto Tienda Online"
+                                loading="lazy" width="600" height="400">
+                        </picture>
+                    </div>
+                    <div class="proyecto-info">
+                        <span class="proyecto-categoria">E-Commerce</span>
+                        <h3>Tienda Online</h3>
+                        <p>Plataforma de comercio electrónico con catálogo de productos, carrito de compras y diseño
+                            atractivo.</p>
+                        <div class="proyecto-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS Grid</span>
+                            <span>Flexbox</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3: Dashboard -->
+                <article class="tarjeta-proyecto">
+                    <div class="proyecto-imagen">
+                        <picture>
+                            <source srcset="assets/img/proyecto-dashboard.avif" type="image/avif">
+                            <img src="assets/img/proyecto-dashboard-original.png"
+                                alt="Captura del proyecto Dashboard Analytics" loading="lazy" width="600" height="400">
+                        </picture>
+                    </div>
+                    <div class="proyecto-info">
+                        <span class="proyecto-categoria">Aplicación Web</span>
+                        <h3>Dashboard Analytics</h3>
+                        <p>Panel de administración con visualización de datos, gráficos interactivos y tema oscuro
+                            elegante.</p>
+                        <div class="proyecto-tecnologias">
+                            <span>CSS Variables</span>
+                            <span>Dark Mode</span>
+                            <span>Charts</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- =============================================
+             SECCIÓN CONTACTO CON FORMULARIO
+             ============================================= -->
+        <section id="contacto" class="seccion-contacto">
+            <h2 class="titulo-seccion">Contacta Conmigo</h2>
+            <p class="subtitulo-seccion">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+
+            <form action="#" method="POST" class="formulario-contacto">
+                <div class="campo-grupo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required
+                        autocomplete="email">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="¿De qué quieres hablar?" required>
+                </div>
+
+                <div class="campo-grupo campo-mensaje">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="boton-enviar">
+                    <span>Enviar Mensaje</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" />
+                    </svg>
+                </button>
+            </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 [Tu Nombre]</p>
+    <!-- =============================================
+         PIE DE PÁGINA
+         ============================================= -->
+    <footer class="pie-pagina">
+        <div class="footer-contenido">
+            <div class="footer-logo">
+                <svg class="logo-icono" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" />
+                    <path d="M12 20L18 26L28 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span>DevPortfolio</span>
+            </div>
+
+            <nav class="footer-enlaces">
+                <a href="#inicio">Inicio</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <p class="footer-copyright">
+                Trabajo Tema 4 DIW
+            </p>
+        </div>
     </footer>
+
 </body>
+
 </html>
