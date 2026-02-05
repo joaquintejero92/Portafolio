@@ -76,31 +76,6 @@ Footer con enlaces y copyright.
 
 ---
 
-## 📸 Capturas de Pantalla
-
-### Versión Escritorio
-
-#### Modo Claro
-*(Añadir captura de pantalla aquí)*
-
-#### Modo Oscuro
-*(Añadir captura de pantalla aquí)*
-
-### Versión Móvil
-
-#### Hero y Navegación
-*(Añadir captura de pantalla aquí)*
-
-#### Habilidades
-*(Añadir captura de pantalla aquí)*
-
-#### Proyectos
-*(Añadir captura de pantalla aquí)*
-
-#### Contacto
-*(Añadir captura de pantalla aquí)*
-
----
 
 ## 🛠️ Tecnologías Utilizadas
 
