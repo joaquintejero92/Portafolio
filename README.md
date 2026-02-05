@@ -76,37 +76,6 @@ Footer con enlaces y copyright.
 
 ---
 
-## 📸 Capturas de Pantalla
-
-### Versión Escritorio
-
-#### Modo Claro
-<img width="1902" height="868" alt="image" src="https://github.com/user-attachments/assets/32a761a2-140f-4ad4-a0d8-d395fae43809" />
-
-
-#### Modo Oscuro
-<img width="1901" height="877" alt="image" src="https://github.com/user-attachments/assets/b0e511e9-e198-40b5-a5a3-6e57c0a4e1b8" />
-
-
-### Versión Móvil
-
-#### Hero y Navegación
-<img width="231" height="726" alt="image" src="https://github.com/user-attachments/assets/fe61eb47-2ebc-4f2e-a319-7d92daa0723f" />
-
-
-#### Habilidades
-<img width="228" height="327" alt="image" src="https://github.com/user-attachments/assets/892089b3-2498-4e19-8095-b4490c24147b" />
-
-
-#### Proyectos
-<img width="232" height="536" alt="image" src="https://github.com/user-attachments/assets/1e78ee9d-828c-4b6a-a381-63db232fcc26" />
-
-
-#### Contacto
-<img width="232" height="712" alt="image" src="https://github.com/user-attachments/assets/c9c35ebc-6ff3-425e-865a-9dd346d2e791" />
-
-
----
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -195,6 +164,6 @@ Este proyecto es un trabajo académico para el módulo de Diseño de Interfaces 
 
 ## 👤 Autor
 
-**[Tu Nombre]**  
+**[Joaquin]**  
 Estudiante de 2º DAW  
-[Tu email o GitHub]
+[https://github.com/joaquintejero92]
